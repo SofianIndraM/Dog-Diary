@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "764894500934",
+    "project_id": "dogdiary-92a7d",
+    "storage_bucket": "dogdiary-92a7d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764894500934:android:1b06924d38ce004a08d247",
+        "android_client_info": {
+          "package_name": "com.sofian.dog_diary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764894500934-iintqk22vnrj37s1t44dmbqlgpqrc0sb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC51ApaZP7LOoHox_MAtiKS-xQxjkoOP2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764894500934-iintqk22vnrj37s1t44dmbqlgpqrc0sb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
