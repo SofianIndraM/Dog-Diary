@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'article_page.dart';
-import 'camera_page.dart';
+import 'kamera_page.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class MainPage extends StatelessWidget {
         case 0:
           return HomePage();
         case 1:
-          return CameraPage();
+          return KameraPage();
         case 2:
           return ArticlePage();
         case 3:

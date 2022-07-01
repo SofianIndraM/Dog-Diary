@@ -1,10 +1,13 @@
+import 'package:dog_diary/models/artikel_model.dart';
+import 'package:dog_diary/ui/widgets/anjing_besar_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/theme.dart';
 import '../pages/detail_artikel.dart';
 
 class ArtikelCard extends StatelessWidget {
-  const ArtikelCard({Key? key}) : super(key: key);
+  final ArtikelModel artikel;
+  const ArtikelCard(this.artikel, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class ArtikelCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailArtikel(),
+            builder: (context) => DetailArtikel(artikel),
           ),
         );
       },
@@ -47,8 +50,8 @@ class ArtikelCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(defaultRadius),
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage(
-                    'assets/foto_poodle.png',
+                  image: NetworkImage(
+                    artikel.imageurl,
                   ),
                 ),
               ),
@@ -59,7 +62,7 @@ class ArtikelCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Waspada, Ini Tanda-tanda Anjing Kelebihan Berat Badan',
+                    artikel.judul,
                     style: blackTextStyle.copyWith(
                       fontWeight: medium,
                     ),
@@ -68,7 +71,7 @@ class ArtikelCard extends StatelessWidget {
                     height: 16,
                   ),
                   Text(
-                    'Selasa, 5 April 2021',
+                    artikel.hari,
                     style: greyTextStyle.copyWith(
                       fontWeight: light,
                       fontSize: 12,

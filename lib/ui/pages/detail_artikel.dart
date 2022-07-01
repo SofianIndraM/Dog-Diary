@@ -1,8 +1,11 @@
+import 'package:dog_diary/models/artikel_model.dart';
 import 'package:dog_diary/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailArtikel extends StatelessWidget {
-  const DetailArtikel({Key? key}) : super(key: key);
+  final ArtikelModel artikel;
+  const DetailArtikel(this.artikel, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,7 @@ class DetailArtikel extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Waspada, Ini Tanda-Tanda Anjing Kelebihan Berat Badan',
+              artikel.judul,
               style: blackTextStyle.copyWith(
                 fontSize: 20,
                 fontWeight: semiBold,
@@ -26,7 +29,7 @@ class DetailArtikel extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'Kamis, 26 Mei 2022',
+              artikel.hari,
               style: greyTextStyle.copyWith(
                 fontSize: 12,
                 fontWeight: light,
@@ -43,7 +46,9 @@ class DetailArtikel extends StatelessWidget {
                 borderRadius: BorderRadius.circular(defaultRadius),
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage('assets/foto_poodle.png'),
+                  image: NetworkImage(
+                    artikel.imageurl,
+                  ),
                 ),
               ),
             ),
@@ -63,7 +68,7 @@ class DetailArtikel extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'JAKARTA, KOMPAS.com - Anjing merupakan salah satu hewan peliharaan yang lucu dan menggemaskan dalam segala bentuk serta ukuran. Namun, kebanyakan orang cenderung menyukai anjing yang bertubuh gempal, bahkan gemuk. Anjing dengan tubuh gemuk terlihat semakin menggemaskan. Namun, sebetulnya, para pemilik anjing perlu mengkhawatirkan dan mewaspadai ketika sahabat bulunya bertubuh gemuk.  Pasalnya, anjing bertubuh gemuk lebih mudah menyebabkan kegemukan atau obesitas, yang akhirnya membuatnya lebih rentan mengalami sejumlah masalah kesehatan seperti diabetes melitus, jantung, osteoartritis, kanker, bahkan memperpendek usianya. Karena itu, sebagai "orang tua" anjing, penting untuk bertanggung jawab terhadap berat badan anjing peliharaan dan mengetahui tanda-tanda anjing kegemukan. Untuk mengetahui, tanda-tanda anjing kegemukan sangatlah mudah. Ada beberapa tanda yang menunjukkan anjing kegemukan atau kelebihan berat badan.  "Tanda paling jelas bahwa anjing kelebihan berat badan adalah mereka tampak sedikit gemuk karena kelebihan lemak yang menumpuk di sekitar tubuh," kata Katherine Macmillan, dokter hewan yang berpraktik di Locum Veterinaria, Australia, kepada 9Honey, Kamis (26/5/2022).  Macmillan mengatakan ada sebagian anjing secara alami lebih gemuk daripada anjing lain, tetapi semua harus memiliki pinggang yang jelas jika dilihat dari atas dan samping—profil mereka harus "terselip" di depan bagian belakangnya. "Ini mungkin lebih sulit diukur pada anjing yang memiliki bulu lebat atau panjang, kecuali dalam keadaan basah." Selain itu, tanda anjing kegemukan adalah mudah kelelahan. Anjing yang kelebihan berat badan sering kali merasa lesu dan kurang antusias untuk berolahraga.',
+              artikel.isi,
               style: blackTextStyle.copyWith(
                 height: 2,
                 fontSize: 12,
@@ -86,11 +91,16 @@ class DetailArtikel extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 6),
-                  Text(
-                    'https://www.kompas.com',
-                    style: greyTextStyle.copyWith(
-                      fontWeight: light,
-                      fontSize: 12,
+                  GestureDetector(
+                    onTap: () async {
+                      await launch(artikel.sumber);
+                    },
+                    child: Text(
+                      artikel.sumber,
+                      style: greyTextStyle.copyWith(
+                        fontWeight: light,
+                        fontSize: 12,
+                      ),
                     ),
                   ),
                 ],
@@ -105,7 +115,7 @@ class DetailArtikel extends StatelessWidget {
             ),
             SizedBox(height: 6),
             Text(
-              'Esra Dopita Maret',
+              artikel.penulis,
               style: greyTextStyle.copyWith(
                 fontWeight: light,
                 fontSize: 12,

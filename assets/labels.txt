@@ -1,0 +1,10 @@
+0 Poodle
+1 Pomeranian
+2 Chihuahua
+3 Pug
+4 Beagle
+5 Golden Retriever
+6 German Shepherd
+7 Samoyed
+8 Siberian Husky
+9 Bernese Mountain Dog

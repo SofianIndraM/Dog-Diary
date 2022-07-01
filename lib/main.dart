@@ -1,7 +1,9 @@
 import 'package:dog_diary/cubit/anjing_kecil_cubit.dart';
+import 'package:dog_diary/cubit/artikel_cubit.dart';
 import 'package:dog_diary/cubit/page_cubit.dart';
 import 'package:dog_diary/ui/pages/get_started_page.dart';
 import 'package:dog_diary/ui/pages/splash_page.dart';
+import 'package:dog_diary/ui/pages/kamera_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,6 +27,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => AnjingKecilCubit(),
+        ),
+        BlocProvider(
+          create: (context) => ArtikelCubit(),
         ),
       ],
       child: MaterialApp(
