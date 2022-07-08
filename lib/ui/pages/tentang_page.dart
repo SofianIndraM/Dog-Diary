@@ -175,7 +175,7 @@ class TentangPage extends StatelessWidget {
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     image: AssetImage(
-                      'assets/cover.png',
+                      'assets/foto_kuliah.png',
                     ),
                     fit: BoxFit.cover,
                   ),

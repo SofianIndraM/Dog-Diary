@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   margin: EdgeInsets.only(top: 30),
                   child: Text(
-                    'Anjing Kecil',
+                    'Berukuran Kecil :',
                     style: blackTextStyle.copyWith(
                       fontSize: 18,
                       fontWeight: semiBold,
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Anjing Sedang & Besar',
+              'Berukuran Sedang & Besar :',
               style: blackTextStyle.copyWith(
                 fontSize: 18,
                 fontWeight: semiBold,

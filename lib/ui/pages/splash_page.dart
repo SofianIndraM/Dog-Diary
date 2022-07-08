@@ -15,7 +15,8 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     Timer(Duration(seconds: 3), () {
-      Navigator.pushNamed(context, 'get-started');
+      Navigator.pushNamedAndRemoveUntil(
+          context, 'get-started', (route) => false);
     });
     super.initState();
   }

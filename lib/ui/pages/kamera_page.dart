@@ -107,7 +107,7 @@ class _KameraPageState extends State<KameraPage> {
                   height: 6,
                 ),
                 Text(
-                  'Ketahui jenis hewan mamalia\ndisekitar anda',
+                  'Ketahui jenis anjing\ndisekitar anda',
                   style: whiteTextstyle.copyWith(
                     fontWeight: light,
                   ),
@@ -162,7 +162,7 @@ class _KameraPageState extends State<KameraPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Nama :',
+                              'Jenis Anjing Peliharaan :',
                               style: blackTextStyle.copyWith(
                                   fontSize: 18, fontWeight: semiBold),
                             ),
@@ -258,7 +258,7 @@ class _KameraPageState extends State<KameraPage> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      'assets/icon_kaki.png',
+                      'assets/icon_kamera_white.png',
                     ),
                   ),
                 ),
@@ -303,7 +303,7 @@ class _KameraPageState extends State<KameraPage> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      'assets/icon_kaki.png',
+                      'assets/icon_galeri.png',
                     ),
                   ),
                 ),
