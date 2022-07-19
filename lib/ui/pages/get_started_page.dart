@@ -52,9 +52,12 @@ class GetStartedPage extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(builder: (context) => MainPage()),
-                        (route) => false);
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainPage(),
+                      ),
+                      (route) => false,
+                    );
                   },
                 )
               ],
