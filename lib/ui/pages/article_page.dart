@@ -106,7 +106,7 @@ class _ArticlePageState extends State<ArticlePage> {
                     bottom: 30,
                   ),
                   child: Text(
-                    'Semua Artikel',
+                    'Semua Art',
                     style: blackTextStyle.copyWith(
                       fontSize: 18,
                       fontWeight: semiBold,
